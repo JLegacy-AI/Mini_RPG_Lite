@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Imports Mandatory for Components -->
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import javafx.geometry.Insets?>
+<!-- Imports End -->
+
+<!-- Main BorderPane Start -->
+<BorderPane fx:controller="game.ControllerViews.GameController"
+            maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="583.0" prefWidth="899.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+   <left>
+   
+   <!-- Heroes SideBar ScrollPane Start -->
+      <ScrollPane hbarPolicy="NEVER" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <content>
+         
+         <!-- Heroes SideBar VBox Start -->
+         <!-- This Contain Elements in Vertical Manner -->
+            <VBox fx:id="heroContainer" prefHeight="581.0" prefWidth="199.0" style="-fx-background-color: #9e0b11;" spacing="20.0">
+               <padding>
+                  <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+               </padding>
+            </VBox>
+            
+    	 <!-- Heroes SideBar VBox End -->
+            
+         </content>
+      </ScrollPane>
+   <!-- Heroes SideBar ScrollPane End -->
+      
+   </left>
+   <right>
+   
+   <!-- Enemies SideBar ScrollPane Start -->
+      <ScrollPane hbarPolicy="NEVER" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <content>
+         
+         <!-- Enemy SideBar VBox Start -->
+            <VBox fx:id="enemiesContainer" prefHeight="581.0" prefWidth="199.0" style="-fx-background-color: #8b040a;" spacing="20.0" >
+               <padding>
+                  <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+               </padding>
+            </VBox>
+	 <!-- Enemy SideBar VBox End -->
+            
+         </content>
+      </ScrollPane>
+   <!-- Enemies SideBar ScrollPane End -->
+   
+   </right>
+   <center>
+   
+   <!-- Attack BorderPane Which contain both Attack and Reward Buttons and Name of game "Mini RPG Lite" -->
+      <BorderPane fx:id="screenContainer" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+      
+      <!-- Border Pane Top Contain Name of Game Start-->
+         <top>
+            <Pane prefHeight="86.0" prefWidth="499.0" style="-fx-background-color: #3C040B;" BorderPane.alignment="CENTER">
+               <children>
+                  <Text fill="WHITE" layoutX="24.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mini">
+                     <font>
+                        <Font name="Cooper Black" size="37.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="122.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="RPG">
+                     <font>
+                        <Font size="26.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="183.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="lite" />
+                  <Text fx:id="messageText" fill="green" layoutX="24" layoutY="80"/>
+               </children>
+            </Pane>
+         </top>
+       <!-- Border Pane Top Contain Name of Game End-->
+       
+       <!-- Center of This BorderPane handled in Controller and Buttons also Added Programatically-->
+      
+      </BorderPane>
+     <!-- Attack Borderpane End -->
+   
+   </center>
+</BorderPane>
